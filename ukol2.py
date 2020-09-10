@@ -1,9 +1,7 @@
-a = 0
+a = int(input("zadejte cislo:"))
 
-while a < 10:
-    if (a % 2) == 0: 
-        print(a, "je sudé")
-        a += 1
-    else:
-        print(a, "je liché")
-        a +=1
+if (a % 2) == 0: 
+    print("je sudé")
+     
+else:
+    print("je liché")
