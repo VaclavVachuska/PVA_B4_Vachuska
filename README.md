@@ -1,2 +1,2 @@
-úkol2:OK
-##Zatim ignorujte, testuji hromadne zpravy.
+## úkol2:OK
+##ukol07:OK
