@@ -13,3 +13,5 @@ for line in sys.stdin:
     print("</tr>")
 
 print('</table>\n</body>\n</html>')
+
+#Převede csv soubor do html tabulky
