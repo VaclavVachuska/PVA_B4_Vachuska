@@ -1,0 +1,37 @@
+WindowManager:
+    MainWindow:
+    SecondWindow:
+
+<MainWindow>:
+    name: "main"
+
+    BoxLayout:
+        orientation: "vertical"
+        cols:1
+
+        BoxLayout:
+            cols: 2
+            orientation: "horizontal"
+
+            Label:
+                text: "Heslo: "
+
+            TextInput:
+                id: passw
+                multiline: False
+
+        Button:
+            text: "Potvrdit"
+            on_release:
+                app.root.current = "second" if passw.text == "heslo" else "main"
+                root.manager.transition.direction = "left"
+
+
+<SecondWindow>:
+    name: "second"
+
+    Button:
+        text: "Zpet"
+        on_release:
+            app.root.current = "main"
+            root.manager.transition.direction = "right"
