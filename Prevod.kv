@@ -1,0 +1,68 @@
+#:kivy 1.10.0
+<Box>
+    vstup:input1        #oznaceni v pythonu:oznaceni v kivy
+    exit:button1
+
+    RelativeLayout:
+        rows:4
+        TextInput:
+            id : input1
+            hint_text: "zadej číslo"
+            size_hint: 0.4, 0.15
+            pos_hint: {'center_x': 0.25, 'center_y': 0.85}
+        Button:
+            id: preved
+            text: "Převeď"
+            size_hint: 0.4, 0.15
+            pos_hint: {'center_x': 0.75, 'center_y': 0.85}
+            on_press: root.buttonpress()
+
+        PageLayout:
+            RelativeLayout:
+                rows: 2
+                canvas:
+                    Color:
+                        rgba: .5, .5, .5, 1
+                    Rectangle:
+                        size: 500,120
+                        pos: 0,90
+                TextInput:
+                    id: euro1
+                    text: ""
+                    halign: "left"
+                    size_hint: 1, 0.15
+                    pos_hint: {'center_x': 0.55, 'center_y': 0.6}
+                TextInput:
+                    id: euro2
+                    text: ""
+                    halign: "left"
+                    size_hint: 1, 0.15
+                    pos_hint: {'center_x': 0.55, 'center_y': 0.4}
+
+            RelativeLayout:
+                rows: 2
+                canvas:
+                    Color:
+                        rgba: .75, .75, .75, 1
+                    Rectangle:
+                        size: 500,120
+                        pos: 0,90
+                TextInput:
+                    id: usd1
+                    text: ""
+                    halign: "left"
+                    size_hint: 1, 0.15
+                    pos_hint: {'center_x': 0.55, 'center_y': 0.6}
+                TextInput:
+                    id: usd2
+                    text: ""
+                    halign: "left"
+                    size_hint: 1, 0.15
+                    pos_hint: {'center_x': 0.55, 'center_y': 0.4}
+        Button:
+            id : button1
+            text: "konec"
+            size_hint: 0.4, 0.15
+            pos_hint: {'center_x': 0.75, 'center_y': 0.15}
+            on_press: root.quit()
+            color: (1,0,0,1)
